@@ -40,6 +40,7 @@ def concat_video(video:Video):
         ffmpeg
         .output(joined[0], joined[1], output_path)
         .global_args('-y')
+        #.global_args('-report')
         .global_args('-loglevel', 'error')
         .run()
     )
